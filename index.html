@@ -251,7 +251,7 @@ h1,h2,h3{font-size:14px !important;line-height:1.5 !important;margin:2px 0 !impo
     document.getElementById('ageNow').textContent=ay+' سنة';
     document.getElementById('ageWeeks').textContent=(cur+1)+' أسبوع عشته';
     document.getElementById('ageLeft').textContent=leftY+' سنة';
-    document.getElementById('weeksLeft').textContent=future+' أسبوع متبقية — اطال الله عمرك وحسن عملك';
+    document.getElementById('weeksLeft').innerHTML=future+' أسبوع متبقية<br><span style="color:#a855f7;font-size:12px;font-weight:bold;">اطال الله عمرك وحسن عملك 🤍</span>';
 
     var cards=[{c:'#16a34a',l:'أسبوع أنجزته',n:achieved},{c:'#dc2626',l:'أسبوع ضاع',n:wasted},{c:'#f59e0b',l:'ماضٍ قبل المتابعة',n:past},{c:'#cbd5e1',l:'متبقٍّ لك',n:future}];
     document.getElementById('counters').innerHTML=cards.map(function(x){var pct=((x.n/TOTAL)*100).toFixed(1);return '<div class="rounded-2xl p-4" style="flex:1 1 140px;background:var(--card);border:1px solid var(--border);border-top:3px solid '+x.c+';box-shadow:0 1px 3px rgba(45,27,78,.06);"><div style="display:flex;align-items:center;gap:7px;margin-bottom:6px;"><span style="width:12px;height:12px;border-radius:3px;background:'+x.c+';display:inline-block;"></span><span class="text-xs font-bold" style="color:var(--muted);">'+x.l+'</span></div><div class="text-2xl font-extrabold" style="font-variant-numeric:tabular-nums;">'+x.n+'</div><div class="text-xs" style="color:var(--muted);">'+pct+'% من العمر</div></div>';}).join('');
